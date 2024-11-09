@@ -2,8 +2,12 @@
 SecurBank Demo Site for Adobe Experience Manager with Edge Delivery Services.
 
 ## Environments
-- Preview: https://main--securbank-aem-ue--markszulc.aem.page/
-- Live: https://main--securbank-aem-ue--markszulc.aem.live/
+- Preview: https://main--securbank-aem-ue--danzhang-pm.aem.page/
+- Live: https://main--securbank-aem-ue--danzhang-pm.aem.live/
+
+## Some hardcoded AEM CS urls have to be replaced
+- Search the AEM urls in code,
+- /conf/securbank/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content, replace the owner and repo
 
 ## Installation
 
