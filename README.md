@@ -8,6 +8,7 @@ SecurBank Demo Site for Adobe Experience Manager with Edge Delivery Services.
 ## Some hardcoded AEM CS urls have to be replaced
 - Search the AEM urls in code,
 - /conf/securbank/settings/cloudconfigs/edge-delivery-service-configuration/jcr:content, replace the owner and repo
+- At this stage, manually modify the osgiconfig under ui.config for publish tier to resolve the CORS error
 
 ## Installation
 
