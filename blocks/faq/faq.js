@@ -8,10 +8,10 @@ export default async function decorate(block) {
   const aempublishurl = 'https://publish-p53543-e1212862.adobeaemcloud.com';
   const aemauthorurl = 'https://author-p53543-e1212862.adobeaemcloud.com';
 
-  const url = `https://publish-p53543-e1212862.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag?ts=${cachebuster}`;
-  /*const url = window.location && window.location.origin && window.location.origin.includes('author')
+  /*const url = `https://publish-p53543-e1212862.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag?ts=${cachebuster}`;*/
+  const url = window.location && window.location.origin && window.location.origin.includes('author')
     ? `${aemauthorurl}${persistedquery};ts=${Math.random() * 1000}`
-    : `${aempublishurl}${persistedquery};ts=${Math.random() * 1000}`;*/
+    : `${aempublishurl}${persistedquery};ts=${Math.random() * 1000}`;
   
   const options = {};
   const faq = await fetch(url, options);
