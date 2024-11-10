@@ -4,8 +4,13 @@ export default async function decorate(block) {
   const firsttag = props[0].textContent.trim() || 'faqList';
   const variationname = props[1].textContent.trim() || 'master';
   const cachebuster = Math.floor(Math.random() * 1000);
+  const persistedquery = '/graphql/execute.json/securbank/FAQListbyTag;
 
-  const url = `https://author-p53543-e1212862.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag?ts=${cachebuster}`;
+  /*const url = `https://author-p53543-e1212862.adobeaemcloud.com/graphql/execute.json/securbank/FAQListbyTag?ts=${cachebuster}`;*/
+  const url = window.location && window.location.origin && window.location.origin.includes('author')
+    ? `${aemauthorurl}${persistedquery};ts=${Math.random() * 1000}`
+    : `${aempublishurl}${persistedquery};ts=${Math.random() * 1000}`;
+  
   const options = {};
   const faq = await fetch(url, options);
   const index = await faq.json();
